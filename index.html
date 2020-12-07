@@ -5,16 +5,245 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Dashboard</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/mobile.css">
   
 </head>
 <body>
+  <header class="dashboard-header">
+    <div class="container">
+      <div class="dashboard-header-wrapper">
+        <div class="left">
+          <h1>Social Media Dashboard</h1>
+          <h4>Total Followers: 23,004</h4>
+        </div>
+        <div class="right">
+          <div class="theme-switch-wrapper">
+            <h4>Dark Mode</h4>
+            <label class="switch" for="slider">
+              <input type="checkbox" id="slider">
+              <div class="slider round"></div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <!-- social cards -->
+    <section class="social-cards">
+      <div class="container">
+        <div class="social-cards-wrapper">
+          <!-- facebook -->
+          <div class="social-card facebook">
+            <div class="social-card-header">
+              <img src="./images/icon-facebook.svg" alt="Facebook">
+              <span>@nathanf</span>
+            </div>
+            <div class="social-card-content">
+              <h1>1987</h1>
+              <p>Followers</p>
+            </div>
+            <div class="social-card-footer">
+              <img src="./images/icon-up.svg" alt="Arrow up">
+              <span class="arrow-up">12 Today</span>
+            </div>
+          </div>
+          <!-- twitter -->
+          <div class="social-card twitter">
+            <div class="social-card-header">
+              <img src="./images/icon-twitter.svg" alt="Twitter">
+              <span>@nathanf</span>
+            </div>
+            <div class="social-card-content">
+              <h1>1044</h1>
+              <p>Followers</p>
+            </div>
+            <div class="social-card-footer">
+              <img src="./images/icon-up.svg" alt="Arrow up">
+              <span class="arrow-up">99 Today</span>
+            </div>
+          </div>
+          <!-- instagram -->
+          <div class="social-card instagram">
+            <div class="social-card-header">
+              <img src="./images/icon-instagram.svg" alt="Instagram">
+              <span>@realnathanf</span>
+            </div>
+            <div class="social-card-content">
+              <h1>11k</h1>
+              <p>Followers</p>
+            </div>
+            <div class="social-card-footer">
+              <img src="./images/icon-up.svg" alt="Arrow up">
+              <span class="arrow-up">1099 Today</span>
+            </div>
+          </div>
+          <!-- youtube -->
+          <div class="social-card youtube">
+            <div class="social-card-header">
+              <img src="./images/icon-youtube.svg" alt="Youtube">
+              <span>@nathanf</span>
+            </div>
+            <div class="social-card-content">
+              <h1>8239</h1>
+              <p>Subscribers</p>
+            </div>
+            <div class="social-card-footer">
+              <img src="./images/icon-down.svg" alt="Arrow down">
+              <span class="arrow-down">144 Today</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+     <!--overview  -->
+     <section class="overview-cards">
+      <div class="container">
+        <h2>Overview - Today</h2>
+        <div class="overview-wrapper">
+          <div class="overview-row">
+            <div class="overview-card">
+              <div class="up-row">
+                <span>Page Views</span>
+                <div>
+                  <img src="./images/icon-facebook.svg" alt="Facebook">
+                </div>
+              </div>
+              <div class="down-row">
+                <h3>87</h3>
+                <div>
+                  <img src="./images/icon-up.svg" alt="Arrow up">
+                  <span class="arrow-up">3%</span>
+                </div>
+              </div>
+            </div>
+            <div class="overview-card">
+              <div class="up-row">
+                <span>Page Views</span>
+                <div>
+                  <img src="./images/icon-facebook.svg" alt="Facebook">
+                </div>
+              </div>
+              <div class="down-row">
+                <h3>87</h3>
+                <div>
+                  <img src="./images/icon-up.svg" alt="Arrow up">
+                  <span class="arrow-up">3%</span>
+                </div>
+              </div>
+            </div>
+            <div class="overview-card">
+              <div class="up-row">
+                <span>Page Views</span>
+                <div>
+                  <img src="./images/icon-facebook.svg" alt="Facebook">
+                </div>
+              </div>
+              <div class="down-row">
+                <h3>87</h3>
+                <div>
+                  <img src="./images/icon-up.svg" alt="Arrow up">
+                  <span class="arrow-up">3%</span>
+                </div>
+              </div>
+            </div>
+            <div class="overview-card">
+              <div class="up-row">
+                <span>Page Views</span>
+                <div>
+                  <img src="./images/icon-facebook.svg" alt="Facebook">
+                </div>
+              </div>
+              <div class="down-row">
+                <h3>87</h3>
+                <div>
+                  <img src="./images/icon-up.svg" alt="Arrow up">
+                  <span class="arrow-up">3%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="overview-row">
+            <div class="overview-card">
+              <div class="up-row">
+                <span>Page Views</span>
+                <div>
+                  <img src="./images/icon-facebook.svg" alt="Facebook">
+                </div>
+              </div>
+              <div class="down-row">
+                <h3>87</h3>
+                <div>
+                  <img src="./images/icon-up.svg" alt="Arrow up">
+                  <span class="arrow-up">3%</span>
+                </div>
+              </div>
+            </div>
+            <div class="overview-card">
+              <div class="up-row">
+                <span>Page Views</span>
+                <div>
+                  <img src="./images/icon-facebook.svg" alt="Facebook">
+                </div>
+              </div>
+              <div class="down-row">
+                <h3>87</h3>
+                <div>
+                  <img src="./images/icon-up.svg" alt="Arrow up">
+                  <span class="arrow-up">3%</span>
+                </div>
+              </div>
+            </div>
+            <div class="overview-card">
+              <div class="up-row">
+                <span>Page Views</span>
+                <div>
+                  <img src="./images/icon-facebook.svg" alt="Facebook">
+                </div>
+              </div>
+              <div class="down-row">
+                <h3>87</h3>
+                <div>
+                  <img src="./images/icon-up.svg" alt="Arrow up">
+                  <span class="arrow-up">3%</span>
+                </div>
+              </div>
+            </div>
+            <div class="overview-card">
+              <div class="up-row">
+                <span>Page Views</span>
+                <div>
+                  <img src="./images/icon-facebook.svg" alt="Facebook">
+                </div>
+              </div>
+              <div class="down-row">
+                <h3>87</h3>
+                <div>
+                  <img src="./images/icon-up.svg" alt="Arrow up">
+                  <span class="arrow-up">3%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     </section>
+  </main>
 
- 
-  
-  
+  <script>
+    const themeSwitch = document.querySelector('.switch input[type="checkbox"]');
+
+    function switchTheme(e) {
+      if(e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'light')
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark')
+      }
+    }
+
+    themeSwitch.addEventListener('change', switchTheme, false)
+  </script>
 </body>
 </html>
