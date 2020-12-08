@@ -169,6 +169,8 @@
       </div>
     </div>`;
 
+    // la <span class="arrow-up">${item.text}</span> daca am clasa arrow-up textul trebuie sa fie verde, dar daca am clasa arrow-down textul trebuie sa fie rosu
+
     document.querySelector(".overview-wrapper").innerHTML = overviewJSON.map(item => TPL_Results(item)).join('');
 
   </script>
