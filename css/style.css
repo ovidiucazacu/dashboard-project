@@ -242,14 +242,9 @@ input:checked + .slider:before {
 }
 
 .overview-wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-.overview-row {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 35px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
 }
 
 .overview-cards h2 {
@@ -258,7 +253,7 @@ input:checked + .slider:before {
 }
 
 .overview-card {
-  width: 23%;
+  width: 100%;
   background: var(--clr-card-bg);
   padding: 25px;
   border-radius: 5px;

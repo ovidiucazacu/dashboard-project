@@ -103,136 +103,14 @@
       <div class="container">
         <h2>Overview - Today</h2>
         <div class="overview-wrapper">
-          <div class="overview-row">
-            <div class="overview-card">
-              <div class="up-row">
-                <span>Page Views</span>
-                <div>
-                  <img src="./images/icon-facebook.svg" alt="Facebook">
-                </div>
-              </div>
-              <div class="down-row">
-                <h3>87</h3>
-                <div>
-                  <img src="./images/icon-up.svg" alt="Arrow up">
-                  <span class="arrow-up">3%</span>
-                </div>
-              </div>
-            </div>
-            <div class="overview-card">
-              <div class="up-row">
-                <span>Page Views</span>
-                <div>
-                  <img src="./images/icon-facebook.svg" alt="Facebook">
-                </div>
-              </div>
-              <div class="down-row">
-                <h3>87</h3>
-                <div>
-                  <img src="./images/icon-up.svg" alt="Arrow up">
-                  <span class="arrow-up">3%</span>
-                </div>
-              </div>
-            </div>
-            <div class="overview-card">
-              <div class="up-row">
-                <span>Page Views</span>
-                <div>
-                  <img src="./images/icon-facebook.svg" alt="Facebook">
-                </div>
-              </div>
-              <div class="down-row">
-                <h3>87</h3>
-                <div>
-                  <img src="./images/icon-up.svg" alt="Arrow up">
-                  <span class="arrow-up">3%</span>
-                </div>
-              </div>
-            </div>
-            <div class="overview-card">
-              <div class="up-row">
-                <span>Page Views</span>
-                <div>
-                  <img src="./images/icon-facebook.svg" alt="Facebook">
-                </div>
-              </div>
-              <div class="down-row">
-                <h3>87</h3>
-                <div>
-                  <img src="./images/icon-up.svg" alt="Arrow up">
-                  <span class="arrow-up">3%</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="overview-row">
-            <div class="overview-card">
-              <div class="up-row">
-                <span>Page Views</span>
-                <div>
-                  <img src="./images/icon-facebook.svg" alt="Facebook">
-                </div>
-              </div>
-              <div class="down-row">
-                <h3>87</h3>
-                <div>
-                  <img src="./images/icon-up.svg" alt="Arrow up">
-                  <span class="arrow-up">3%</span>
-                </div>
-              </div>
-            </div>
-            <div class="overview-card">
-              <div class="up-row">
-                <span>Page Views</span>
-                <div>
-                  <img src="./images/icon-facebook.svg" alt="Facebook">
-                </div>
-              </div>
-              <div class="down-row">
-                <h3>87</h3>
-                <div>
-                  <img src="./images/icon-up.svg" alt="Arrow up">
-                  <span class="arrow-up">3%</span>
-                </div>
-              </div>
-            </div>
-            <div class="overview-card">
-              <div class="up-row">
-                <span>Page Views</span>
-                <div>
-                  <img src="./images/icon-facebook.svg" alt="Facebook">
-                </div>
-              </div>
-              <div class="down-row">
-                <h3>87</h3>
-                <div>
-                  <img src="./images/icon-up.svg" alt="Arrow up">
-                  <span class="arrow-up">3%</span>
-                </div>
-              </div>
-            </div>
-            <div class="overview-card">
-              <div class="up-row">
-                <span>Page Views</span>
-                <div>
-                  <img src="./images/icon-facebook.svg" alt="Facebook">
-                </div>
-              </div>
-              <div class="down-row">
-                <h3>87</h3>
-                <div>
-                  <img src="./images/icon-up.svg" alt="Arrow up">
-                  <span class="arrow-up">3%</span>
-                </div>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
      </section>
   </main>
 
   <script>
+    // swith theme
     const themeSwitch = document.querySelector('.switch input[type="checkbox"]');
 
     function switchTheme(e) {
@@ -244,6 +122,55 @@
     }
 
     themeSwitch.addEventListener('change', switchTheme, false)
+
+    // populate
+    const overviewJSON = [
+      {
+        "category": "Page Views", "image": "./images/icon-facebook.svg", "counter": "87", "arrow":"./images/icon-up.svg", "text": "3%"
+      },
+      {
+        "category": "Likes", "image": "./images/icon-facebook.svg", "counter": "52", "arrow":"./images/icon-down.svg", "text": "2%"
+      },
+      {
+        "category": "Likes", "image": "./images/icon-instagram.svg", "counter": "5462", "arrow":"./images/icon-up.svg", "text": "2257%"
+      },
+      {
+        "category": "Profile Views", "image": "./images/icon-instagram.svg", "counter": "52k", "arrow":"./images/icon-up.svg", "text": "1375%"
+      },
+      {
+        "category": "Retweets", "image": "./images/icon-twitter.svg", "counter": "117", "arrow":"./images/icon-up.svg", "text": "303%"
+      },
+      {
+        "category": "Likes", "image": "./images/icon-twitter.svg", "counter": "507", "arrow":"./images/icon-up.svg", "text": "553%"
+      },
+      {
+        "category": "Likes", "image": "./images/icon-youtube.svg", "counter": "107", "arrow":"./images/icon-down.svg", "text": "19%"
+      },
+      {
+        "category": "Total Views", "image": "./images/icon-youtube.svg", "counter": "1407", "arrow":"./images/icon-down.svg", "text": "12%"
+      }
+    ];
+    
+    
+
+    const TPL_Results = item => `<div class="overview-card">
+      <div class="up-row">
+        <span>${item.category}</span>
+        <div>
+          <img src="${item.image}" alt="Facebook">
+        </div>
+      </div>
+      <div class="down-row">
+        <h3>${item.counter}</h3>
+        <div>
+          <img src="${item.arrow}" alt="Arrow up">
+          <span class="arrow-up">${item.text}</span>
+        </div>
+      </div>
+    </div>`;
+
+    document.querySelector(".overview-wrapper").innerHTML = overviewJSON.map(item => TPL_Results(item)).join('');
+
   </script>
 </body>
 </html>
