@@ -180,11 +180,13 @@ input:checked + .slider:before {
 
 /* Social Cards */
 .social-cards-wrapper {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
 }
+
 .social-card {
-  width: 23%;
+  width: 100%;
   background: var(--clr-card-bg);
   text-align: center;
   padding: 25px;
@@ -229,7 +231,8 @@ input:checked + .slider:before {
   font-weight: 600;
 }
 
-.social-card-footer span.arrow-down {
+.social-card-footer span.arrow-down,
+.overview-card .down-row span.arrow-down {
   color: var(--clr-bright-red);
   margin-left: 5px;
   font-weight: 600;

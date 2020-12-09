@@ -20,8 +20,14 @@
     font-size: 0.6rem;
   }
 
+  .dashboard-header {
+    padding-top: 0;
+    margin: -20px;
+  }
+
   .dashboard-header-wrapper {
     flex-direction: column;
+    padding: 20px;
   }
 
   .left {
@@ -35,7 +41,8 @@
   }
 
   .social-cards-wrapper {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-gap: 0rem;
   }
 
   .social-card {

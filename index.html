@@ -151,9 +151,10 @@
       }
     ];
     
-    
-
-    const TPL_Results = item => `<div class="overview-card">
+    const TPL_Results = item => {
+      const arrowClassName = item.arrow === "./images/icon-down.svg" ? 'arrow-down' : item.arrow === "./images/icon-up.svg" ? 'arrow-up' : '';
+      
+      return `<div class="overview-card">
       <div class="up-row">
         <span>${item.category}</span>
         <div>
@@ -164,10 +165,10 @@
         <h3>${item.counter}</h3>
         <div>
           <img src="${item.arrow}" alt="Arrow up">
-          <span class="arrow-up">${item.text}</span>
+          <span class="${arrowClassName}">${item.text}</span>
         </div>
       </div>
-    </div>`;
+    </div>`};
 
     // la <span class="arrow-up">${item.text}</span> daca am clasa arrow-up textul trebuie sa fie verde, dar daca am clasa arrow-down textul trebuie sa fie rosu
 
